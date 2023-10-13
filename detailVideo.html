@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Video</title>
+    <link rel="stylesheet" href="./assets/css/detailVideo.css" />
+  </head>
+  <body>
+    <!-- awal navbar -->
+    <nav class="navbar">
+      <img src="./assets/images/barbecue 1.svg" alt="" class="logo-navbar" />
+      <div class="container-navbar">
+        <input type="checkbox" name="" id="toggle-cek" />
+        <label for="toggle-cek" id="humberger-menu">
+          <img
+            src="./assets/images/bars-solid.svg"
+            alt=""
+            class="humberger-menu-img"
+          />
+          <img
+            src="./assets/images/xmark-solid.svg"
+            alt=""
+            class="close-menu"
+          />
+        </label>
+        <ul class="menu-nav">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="#">Add Recipe</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <div class="container">
+      <div class="bg"></div>
+      <div class="content-video">
+        <!-- awal video utama -->
+        <div class="wrapper-video">
+          <div class="img-video">
+            <div class="wrapper-img">
+              <img
+                src="./assets/images/img video.png"
+                alt=""
+                class="thumbnail-video"
+              />
+              <a href="#"
+                ><img
+                  src="./assets/images/play video.svg"
+                  alt=""
+                  class="ply-button"
+              /></a>
+              <a href="#" class="minimize"
+                ><img src="./assets/images/minimize.svg" alt=""
+              /></a>
+            </div>
+            <div class="title-video">
+              <h1>
+                Beef Steak with Curry Sauce - [Step 4] Cut the condiment and
+                then mix it
+              </h1>
+              <p>3 month ago</p>
+            </div>
+          </div>
+          <!-- akhir video utama -->
+
+          <!-- first side video -->
+          <div class="side-video">
+            <div class="content-side-video">
+              <h3>Next</h3>
+              <div class="card-side-video">
+                <a href="#" style="text-decoration: none">
+                  <div class="side-video-img-1">
+                    <p>[Step 5]</p>
+                    <div class="minute">
+                      <p>3:09</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                  <p class="title-next-video">
+                    Beef Steak with Curry Sauce - [Step 5] Saute condiments
+                    together until turn brown
+                  </p>
+                </a>
+                <p class="description-next-video">HanaLohana - 3 month ago</p>
+              </div>
+              <div class="card-side-video">
+                <a href="#" style="text-decoration: none">
+                  <div class="side-video-img-2">
+                    <p>[Step 6]</p>
+                    <div class="minute">
+                      <p>3:09</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                  <p class="title-next-video">
+                    Beef Steak with Curry Sauce - [Step 6] Roast beef until it’s
+                    medium rare
+                  </p>
+                </a>
+                <p class="description-next-video">HanaLohana - 3 month ago</p>
+              </div>
+              <div class="card-side-video">
+                <a href="#" style="text-decoration: none">
+                  <div class="side-video-img-2">
+                    <p>[Step 6]</p>
+                    <div class="minute">
+                      <p>3:09</p>
+                    </div>
+                  </div>
+                </a>
+                <a href="#" style="text-decoration: none">
+                  <p class="title-next-video">
+                    Beef Steak with Curry Sauce - [Step 6] Roast beef until it’s
+                    medium rare
+                  </p>
+                </a>
+                <p class="description-next-video">HanaLohana - 3 month ago</p>
+              </div>
+            </div>
+          </div>
+          <!-- akhir side video -->
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.addEventListener('scroll', () => {
+      const navbar = document.querySelector('nav');
+
+      if (window.scrollY > 0) {
+        navbar.classList.add('navbar-scroll');
+      } else {
+        navbar.classList.remove('navbar-scroll');
+      }
+    });
+
+    const humbergerMenu = document.getElementById('humberger-menu');
+
+    const menuNav = document.querySelector('.menu-nav');
+
+    humbergerMenu.addEventListener('click', () => {
+      menuNav.classList.toggle('slide-navbar');
+    });
+  </script>
+</html>

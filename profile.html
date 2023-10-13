@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="./assets/css/profile.css" />
+  </head>
+  <body>
+    <!-- awal navbar -->
+    <nav class="navbar">
+      <img src="./assets/images/barbecue 1.svg" alt="" class="logo-navbar" />
+      <div class="container-navbar">
+        <input type="checkbox" name="" id="toggle-cek" />
+        <label for="toggle-cek" id="humberger-menu">
+          <img
+            src="./assets/images/bars-solid.svg"
+            alt=""
+            class="humberger-menu-img"
+          />
+          <img
+            src="./assets/images/xmark-solid.svg"
+            alt=""
+            class="close-menu"
+          />
+        </label>
+        <ul class="menu-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Add Recipe</a></li>
+          <li><a href="profile.html" class="active">Profile</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- akhir navbar -->
+
+    <div class="container d-flex">
+      <!-- awal section profile -->
+      <section class="profile">
+        <div class="card-profile d-flex">
+          <div class="img-profile d-flex">
+            <img src="./assets/images/profile.svg" alt="user" class="ic-user" />
+            <a href="#">
+              <img src="/assets/images/ic-edit.svg" alt="" class="ic-edit" />
+            </a>
+          </div>
+        </div>
+        <h3>Garneta Sharina</h3>
+      </section>
+      <!-- akhir section profile -->
+
+      <!-- awal menu -->
+      <nav class="menu">
+        <ul>
+          <li><a href="#" class="active">My Recipe</a></li>
+          <li><a href="#">Saved Recipe</a></li>
+          <li><a href="#">Liked Recipe</a></li>
+        </ul>
+      </nav>
+      <!-- akhir menu -->
+
+      <!-- awal konten resep-->
+      <div class="line"></div>
+      <div class="wrapper-menu-myRecipe d-flex">
+        <div class="card-img">
+          <img src="./assets/images/img-myRecipe1.png" alt="" />
+          <p>Bom Chiken</p>
+        </div>
+        <div class="card-img">
+          <img src="./assets/images/img-myRecipe2.png" alt="" />
+          <p>Banana Pancake</p>
+        </div>
+      </div>
+      <!-- akhir konten resep-->
+    </div>
+
+    <!-- awal footer -->
+    <footer>
+      <div class="footer-bottom">
+        <ul>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Company</a></li>
+          <li><a href="#">Learn More</a></li>
+          <li><a href="#">Get In Touch</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- akhir footer -->
+  </body>
+  <script>
+    const humbergerMenu = document.getElementById('humberger-menu');
+
+    const menuNav = document.querySelector('.menu-nav');
+
+    humbergerMenu.addEventListener('click', () => {
+      menuNav.classList.toggle('slide-navbar');
+    });
+
+    document.addEventListener('scroll', () => {
+      const navbar = document.querySelector('nav');
+
+      if (window.scrollY > 0) {
+        navbar.classList.add('navbar-scroll');
+      } else {
+        navbar.classList.remove('navbar-scroll');
+      }
+    });
+  </script>
+</html>

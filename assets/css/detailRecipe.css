@@ -1,0 +1,492 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Airbnb', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@font-face {
+  font-family: 'Airbnb';
+  src: url(../font/airbnb.woff2);
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'inter';
+  src: url(../font/inter.woff2);
+  font-display: swap;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  max-width: 1000px;
+  flex-direction: column;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-scroll {
+  background-color: lightgray;
+  opacity: 0.7;
+  transition: background-color 0.4s ease-in-out;
+}
+
+#toggle-cek,
+.humberger-menu-img,
+.close-menu,
+.logo-navbar {
+  display: none;
+}
+
+.menu-nav {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+  margin-left: 30px;
+  margin-top: 30px;
+}
+
+.menu-nav li a {
+  color: #2e266f;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.menu-nav li .active {
+  text-decoration: underline;
+}
+
+.title {
+  margin-top: 0px;
+  padding-top: 150px;
+  margin-bottom: 70px;
+  color: #2e266f;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 70px;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.wrapper-img {
+  margin: 0 auto;
+  width: 700px;
+  height: 450px;
+  background-image: url('../images/img\ detail\ recipe\ a.png');
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.wrapper-img a {
+  display: flex;
+  gap: 10px;
+}
+
+.wrapper-icon-bookmark {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background-color: #efc81a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper-icon-bookmark img {
+  width: 25px;
+  height: 25px;
+}
+
+.wrapper-icon-like {
+  width: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  border-radius: 6px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #efc81a;
+}
+
+.wrapper-icon-like img {
+  width: 20px;
+  height: 20px;
+}
+
+.title-ingredients {
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 0;
+  color: #3f3a3a;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 62px;
+  text-transform: capitalize;
+}
+
+.description-ingredients {
+  width: 330px;
+  padding: 0 15px;
+  box-sizing: border-box;
+  font-family: inter;
+  color: #000;
+  font-style: normal;
+  line-height: normal;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.title-video-step {
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-bottom: 0;
+  color: #3f3a3a;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 62px;
+  text-transform: capitalize;
+}
+
+.wrapper-btn {
+  padding: 0 15px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-play {
+  margin-bottom: 20px;
+  width: 250px;
+  height: 60px;
+  border-radius: 10px;
+  border: 3px solid #efc81a;
+  background: linear-gradient(0deg, #efc81a 0%, #efc81a 100%);
+}
+
+.btn-play img {
+  width: 20px;
+  height: 20px;
+}
+
+.form-comment {
+  padding: 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+textarea {
+  padding: 15px 15px;
+  border-style: none;
+  width: 100%;
+  outline: none;
+  background: #f6f5f4;
+  border-radius: 10px;
+  font-family: Airbnb;
+  color: #666;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.wrapper-btn-comment {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-btn-comment button {
+  width: 300px;
+  height: 60px;
+  border-radius: 6px;
+  background: #efc81a;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.title-comment {
+  padding: 0 15px;
+  box-sizing: border-box;
+  margin-top: 50px;
+  color: #3f3a3a;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 62px;
+  text-transform: capitalize;
+}
+
+.wrapper-user-comment {
+  display: flex;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.account-comment {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  align-content: center;
+}
+
+.account-comment h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #000;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  text-transform: capitalize;
+}
+
+.account-comment p {
+  margin-top: 0;
+  color: #000;
+  font-style: normal;
+  font-weight: 400;
+  font-family: inter;
+  text-transform: capitalize;
+}
+
+footer {
+  background: #efc81a;
+  margin-top: 150px;
+}
+
+footer h1 {
+  padding-top: 100px;
+  color: #2e266f;
+  text-align: center;
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  text-transform: capitalize;
+}
+
+footer p {
+  color: #707070;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-bottom ul {
+  padding-top: 100px;
+  padding-left: 0;
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.footer-bottom ul li a {
+  color: #707070;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.footer-bottom p {
+  align-self: flex-end;
+  margin-right: 50px;
+  color: #000;
+  font-size: 13px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 576px) and (max-width: 834px) {
+  .wrapper-img {
+    width: 500px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .wrapper-img {
+    width: 340px;
+    height: 190px;
+  }
+
+  .wrapper-img a {
+    height: 40px;
+  }
+
+  .wrapper-icon-like {
+    margin-bottom: 5px;
+    margin-right: 5px;
+  }
+
+  .title {
+    font-size: 32px;
+    padding-top: 100px;
+    margin-bottom: 0;
+  }
+
+  .title-comment {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+
+  footer {
+    margin-top: 50px;
+  }
+
+  footer h1 {
+    padding-top: 50px;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 28px;
+  }
+
+  footer p {
+    font-size: 8px;
+    font-weight: 200;
+    line-height: 14px;
+  }
+
+  .footer-bottom {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-bottom ul {
+    padding-top: 30px;
+    padding-left: 0;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .footer-bottom ul li a {
+    font-size: 8px;
+    font-weight: 200;
+    line-height: 14px;
+  }
+
+  .footer-bottom p {
+    margin-right: 0;
+    font-size: 6px;
+    font-weight: 100;
+    line-height: 14px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: #efc81a;
+  }
+
+  .navbar-scroll {
+    opacity: 1;
+    background-color: #efc81a;
+  }
+
+  .container-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .menu-nav {
+    box-sizing: border-box;
+    top: 9px;
+    position: absolute;
+    gap: 10px;
+    padding-top: 0;
+    padding-right: 20px;
+    padding-left: 10px;
+    flex-direction: column;
+    background-color: #efc81a;
+    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.11);
+    height: 100vh;
+    transform: translateX(100%);
+    transition: 1s all;
+    opacity: 1;
+  }
+
+  .slide-navbar {
+    transform: translateX(0);
+  }
+
+  #toggle-cek:checked ~ ul {
+    display: flex;
+  }
+
+  #toggle-cek:checked ~ #humberger-menu .close-menu {
+    display: initial;
+  }
+
+  #toggle-cek:checked ~ #humberger-menu .humberger-menu-img {
+    display: none;
+  }
+
+  .menu-nav li a {
+    font-size: 10px;
+    box-sizing: border-box;
+  }
+
+  .humberger-menu-img {
+    display: initial;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+
+  .close-menu {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+  }
+
+  .logo-navbar {
+    display: initial;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-bottom: 7px;
+    margin-top: 3px;
+  }
+}
